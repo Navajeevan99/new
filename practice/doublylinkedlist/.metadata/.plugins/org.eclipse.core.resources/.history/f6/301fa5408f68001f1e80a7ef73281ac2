@@ -1,0 +1,210 @@
+package doublylinkedlistpack;
+class Node{
+	int d;
+	Node pre,next;
+	Node(){
+		pre=null;
+		next=null;
+	}
+}
+class Linkedlist
+{
+	Node head;
+	Linkedlist(){
+		head=null;
+	}
+	void append(int i)
+	{
+		Node L=new Node();
+		L.d=i;
+		if (head==null)
+		{
+			head=L;
+		}
+		else
+		{
+			Node l=head;
+			while(l.next!=null)
+			{
+				l=l.next;
+			}
+			Node t=l;
+			
+			l.next=L;
+			l=l.next;
+			l.pre=t;
+		}
+	}
+	void printlist()
+	{
+		Node L=head;
+		while(L!=null)
+		{
+			System.out.println(L.d);
+			L=L.next;
+		}
+		
+	}
+
+void deletefirst()
+{
+	if (head==null)
+	{
+		System.out.println("Null");
+		
+	}
+	else
+	{
+		head=head.next;
+		head.pre=null;
+		
+	}
+}
+void insertfirst(int i)
+{
+	Node L=new Node();
+	L.d=i;
+	
+	if (head==null)
+	{
+		head=L;
+	}
+	else
+	{
+		Node l=head;
+		head=L;
+		l.pre=head;
+		head.next=l;
+		
+		
+	}
+
+}
+void deletelast()
+{
+	if (head==null)
+	{
+		System.out.println("Null");
+	}
+	else
+	{
+		Node L=head;
+		while(L.next!=null)
+		{
+			L=L.next;
+		}
+		L=L.pre;
+		L.next=null;
+		
+	}
+}
+void printreverse()
+{
+	if (head==null)
+	{
+		System.out.println("Null");
+	}
+	else
+	{
+		Node L=head;
+		while(L.next!=null)
+		{
+			L=L.next;
+		}
+		
+		while(L!=null)
+		{
+			System.out.println(L.d);
+			L=L.pre;
+		}
+	}
+}
+void delete(int i)
+{
+	if (head==null)
+	{
+		System.out.println("NUll");
+	}
+	else
+	{
+		int c=0;
+		Node L=head;
+		while(L!=null)
+		{
+			if (L.d==i)
+			{
+				c=c+1;
+			}
+			L=L.next;
+		}
+		if (c>=1)
+		{
+			L=head;
+			while(L!=null)
+			{
+				if (L.d==i)
+				{
+					
+					if (L.pre==null)
+					{
+						if (L.next==null)
+						{
+							System.out.println("null");
+						}
+						else
+						{
+							head=L.next;
+							head.pre=null;
+						}
+					}
+					else if (L.next==null)
+					{
+						L.pre.next=null;
+					}
+					else
+					{
+						Node t=L.next;
+						L.pre.next=L.next;
+						L.next.pre=L.pre;
+						
+						
+					}
+				}
+				L=L.next;
+				
+			}
+		}
+		else
+		{
+			System.out.println("Element Not Found");
+		}
+}
+}
+
+}
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Linkedlist li=new Linkedlist();
+		li.append(10);
+		li.append(20);
+		li.append(30);
+		li.insertfirst(40);
+		li.deletefirst();
+		li.insertfirst(50);
+		//li.deletelast();
+		//li.deletelast();
+		li.printlist();
+		System.out.println("");
+		//li.printreverse();
+		li.delete(20);
+		li.delete(10);
+		li.delete(30);
+		li.delete(50);
+		
+		li.printlist();
+		
+	}
+
+}

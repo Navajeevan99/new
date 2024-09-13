@@ -1,0 +1,20 @@
+package String_pack;
+import java.util.*;
+import java.lang.String;
+public class enakkkatheriadu {
+
+	String s=new String();
+	char[] x= {'a','b','c'};
+	String S=new String(x,2,3);
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s23=new String();
+		char[] x= {'a','b','c'};
+		String S1=new String(x,2,3);
+		System.out.println(s);
+	
+	}
+
+}

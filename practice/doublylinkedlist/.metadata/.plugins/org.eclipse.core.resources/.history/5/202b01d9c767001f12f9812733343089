@@ -1,0 +1,59 @@
+package doublylinkedlistpack;
+class Node{
+	int d;
+	Node pre,next;
+	Node(){
+		pre=null;
+		next=null;
+	}
+}
+class Linkedlist
+{
+	Node head;
+	Linkedlist(){
+		head=null;
+	}
+	void append(int i)
+	{
+		Node L=new Node();
+		L.d=i;
+		if (head==null)
+		{
+			head=L;
+		}
+		else
+		{
+			Node l=head;
+			while(l.next!=null)
+			{
+				l=l.next;
+			}
+			Node t=l;
+			
+			l.next=L;
+			l=l.next;
+			l.pre=t;
+		}
+	}
+	void printlist()
+	{
+		Node L=head;
+		while(L.next!=head)
+		{
+			System.out.println(L.d);
+			L=L.next;
+		}
+		
+	}
+}
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Linkedlist li=new Linkedlist();
+		li.append(10);
+		li.append(20);
+		
+	}
+
+}

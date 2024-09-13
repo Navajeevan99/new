@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+D:\course\practice\linkedlist\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+804676829.index
+3498066710.index
+3413270776.index

@@ -1,0 +1,31 @@
+package exception_handlingpack;
+
+
+public class thr {
+	void check(int a)
+	{
+		if (a<18)
+		{
+			throw new ArithmeticException("Your age is not valid");
+		}
+	}
+	
+	
+	
+	public static void main(String[] args)
+	{
+		thr r=new thr();
+		try
+		{
+			r.check(16);
+		}
+		catch (ArithmeticException n)
+		{
+			
+		}
+		finally {
+			System.out.print(16);
+		}
+	}
+
+}

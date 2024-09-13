@@ -1,0 +1,42 @@
+package abpack;
+import java.util.Scanner;
+abstract class cartoon
+{
+	 abstract void getinput();
+	 abstract void dispdet();
+}
+class firstcart extends cartoon
+{
+	
+	String name;
+	String fav;
+	int year;
+	void getinput()
+	{
+		Scanner sc=new Scanner(System.in);
+		name=sc.nextLine();
+		fav=sc.nextLine();
+		year=sc.nextInt();
+		
+		sc.close();
+	}
+	void dispdet()
+	{
+		System.out.println("The name of the cartoon is "+name);
+		System.out.println("The cartoon is released in "+year);
+		System.out.println("The cartoo is not favourite or not : "+fav);
+	}
+	
+}
+
+public class abclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		firstcart n=new firstcart();
+		n.getinput();
+		n.dispdet();
+	}
+
+}

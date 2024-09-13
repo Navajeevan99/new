@@ -1,0 +1,11 @@
+package String_pack;
+import java.lang.String;
+public class Chartatandsetcharat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer s=new StringBuffer("Blood Sweet");
+		System.out.println(s.charAt(1));
+	}
+
+}

@@ -1,0 +1,28 @@
+package String_pack;
+import java.lang.String;
+public class Chartatandsetcharat {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer s=new StringBuffer("Bloody Sweet");
+		System.out.println(s.charAt(2));
+		s.setCharAt(2, 'e');
+		System.out.println(s);
+		//append
+		StringBuffer s1=new StringBuffer("Bloody");
+		String s2=" Sweet ";
+		s1.append(s2);
+		System.out.println(s1);
+		s1.append('V').append("IJAY");
+		System.out.println(s1);
+		s1.insert(13, "Told By ");
+		System.out.println(s1);
+		s1.insert(13, "y");
+		System.out.println(s1);
+		s1.insert(26, "y");
+		System.out.println(s1);
+
+		
+	}
+
+}

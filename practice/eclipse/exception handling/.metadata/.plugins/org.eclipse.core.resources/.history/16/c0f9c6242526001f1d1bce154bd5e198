@@ -1,0 +1,26 @@
+package exception_handlingpack;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int a=10;
+		int b=0;
+		int c;
+		
+		try
+		{
+			int arr[]=null;
+			System.out.print(arr[1]);
+		}
+		
+		catch(ArithmeticException e)
+		{
+			System.out.println("ERrro accured");
+		}
+		catch(Exception e)
+		{
+			System.out.println("fd");
+		}
+	}
+
+}

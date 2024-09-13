@@ -1,0 +1,18 @@
+package String_pack;
+import java.lang.String;
+public class stringbufferandstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer s1=new StringBuffer("hello");
+		String s2="hello";
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println("String Buffer Capacity "+s1.capacity());
+		System.out.println("String Buffer length "+s1.length());
+		System.out.println("String length "+s2.length());
+		
+		
+	}
+
+}

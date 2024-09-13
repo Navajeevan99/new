@@ -1,0 +1,13 @@
+package String_pack;
+import java.lang.String;
+
+public class m1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ss1=" Bloody Sweet";
+		ss1.replace('e', 'a');
+		System.out.println(ss1);
+	}
+
+}

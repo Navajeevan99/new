@@ -1,0 +1,14 @@
+package String_pack;
+
+public class stringbufferandstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer s1=new StringBuffer("hello");
+		StringBuffer s2="world";
+		System.out.println(s1);
+		System.out.println(s1);
+		
+	}
+
+}

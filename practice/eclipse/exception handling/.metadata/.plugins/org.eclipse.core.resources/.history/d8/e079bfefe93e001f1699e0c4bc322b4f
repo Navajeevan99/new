@@ -1,0 +1,45 @@
+package exception_handlingpack;
+class userdefined extends Exception
+{
+	String msg;
+	userdefined(String msg)
+	{
+		super(msg);
+		this.msg=msg;
+	}
+	String getmsg()
+	{
+		
+		return this.msg;
+		
+	}
+	
+}
+
+public class thrs {
+	static void check(int a) throws userdefined
+	{
+		if (a<18)
+		{
+			throw new userdefined("Age is not valid");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		{
+			check(16);
+		}
+		catch (userdefined n)
+		{
+			System.out.println(n.getmsg());
+			System.out.println(n);
+		}
+		finally {
+			System.out.print(16);
+		}
+	}
+	}
+
+

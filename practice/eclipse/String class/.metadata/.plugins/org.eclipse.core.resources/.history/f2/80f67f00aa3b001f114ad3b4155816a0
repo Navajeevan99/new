@@ -1,0 +1,13 @@
+package String_pack;
+import java.lang.String;
+public class comp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String sl1="Bloody Sweet";
+		String sl2="Bloody Sweet";
+		System.out.println(sl1.compareTo(sl2));
+		
+	}
+
+}

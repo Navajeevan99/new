@@ -1,0 +1,15 @@
+package Ennum_pack;
+enum day
+{
+	Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
+}
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		day d=day.Monday;
+		System.out.println("The value of day"+d);
+		System.out.println("The position of "+d+d.ordinal());
+	}
+
+}

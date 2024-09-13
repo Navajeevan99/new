@@ -1,0 +1,74 @@
+package singly_linked_list;
+
+class node
+{
+	node next;
+	int data;
+	node(int data){
+		this.data=data;
+		next=null;
+	}
+	
+}
+class linkedlist
+{
+	node head;
+	linkedlist()
+	{
+		head=null;
+	}
+	void insertfirst(int i) {
+		node L=new node(i);
+		if (head==null)
+		{
+			head=L;
+		}
+		else
+		{
+			L.next=head;
+			head=L;
+			
+		}
+		
+	}
+	void printlist()
+	{
+		node L=head;
+		while(L!=null)
+		{
+			System.out.println(L.data);
+			L=L.next;
+		}
+	}
+	void  append(int i) {
+		node L=new node(i);
+		if (head==null)
+		{
+			head=L;
+		}
+		else
+		{
+			node n=head;
+			while(n!=null)	
+			{
+				n=n.next;
+			}
+			n=L;
+			L.next=null;
+			
+		}
+	}
+}
+public class Main {
+	public static void main(String[] args)
+	{
+		linkedlist l=new linkedlist();
+		l.insertfirst(10);
+		l.insertfirst(20);
+		//l.printlist();
+		l.append(30);
+		l.printlist();
+		
+	}
+
+}
